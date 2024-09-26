@@ -1,42 +1,80 @@
-import bluetooth
-import time
+from machine import Pin, Timer
+from time import sleep_ms
+import ubluetooth
 
-# Create a BLE object
-ble = bluetooth.BLE()
+class ESP32_BLE:
+    def __init__(self, name):
+        self.led = Pin(2, Pin.OUT)
+        self.timer1 = Timer(0)
+        self.name = name
+        self.ble = ubluetooth.BLE()
+        self.ble.active(True)
+        self.disconnected()
+        self.ble.irq(self.ble_irq)
+        self.register()
+        self.advertiser()
 
-# Activate BLE
-ble.active(True)
+        # Store the received message
+        self.ble_msg = ""
 
-# Define UUIDs
-SERVICE_UUID = bluetooth.UUID("12345678-1234-5678-1234-56789abcdef0")
-CHARACTERISTIC_UUID = bluetooth.UUID("12345678-1234-5678-1234-56789abcdef1")
+    def connected(self):
+        self.led.value(1)
+        self.timer1.deinit()
 
-# Create a characteristic
-characteristic = (CHARACTERISTIC_UUID, bluetooth.FLAG_READ | bluetooth.FLAG_NOTIFY)
+    def disconnected(self):
+        self.timer1.init(period=100, mode=Timer.PERIODIC, callback=lambda t: self.led.value(not self.led.value()))
 
-# Create a service
-service = (SERVICE_UUID, (characteristic,))
+    def ble_irq(self, event, data):
+        if event == 1:  # Connection
+            print("Device connected!")
+            self.connected()
+        elif event == 2:  # Disconnection
+            print("Device disconnected!")
+            self.advertiser()
+            self.disconnected()
+        elif event == 3:  # GATT write
+            buffer = self.ble.gatts_read(self.rx)
+            self.ble_msg = buffer.decode('UTF-8').strip()
+            print(f"Received message: {self.ble_msg}")
 
-# Register the service
-try:
-    ble.gatts_register_services((service,))
-    print("Services registered.")
-except Exception as e:
-    print("Failed to register services:", e)
+    def register(self):
+        NUS_UUID = '6E400001-B5A3-F393-E0A9-E50E24DCCA9E'
+        RX_UUID = '6E400002-B5A3-F393-E0A9-E50E24DCCA9E'
+        TX_UUID = '6E400003-B5A3-F393-E0A9-E50E24DCCA9E'
+        
+        BLE_NUS = ubluetooth.UUID(NUS_UUID)
+        BLE_RX = (ubluetooth.UUID(RX_UUID), ubluetooth.FLAG_WRITE)
+        BLE_TX = (ubluetooth.UUID(TX_UUID), ubluetooth.FLAG_NOTIFY)
+        
+        BLE_UART = (BLE_NUS, (BLE_TX, BLE_RX,))
+        SERVICES = (BLE_UART,)
+        ((self.tx, self.rx),) = self.ble.gatts_register_services(SERVICES)
 
-# Start advertising
-def advertise():
-    # Construct the advertising data
-    advertising_data = (
-        b'\x02\x01\x06' +                     # Flags
-        b'\x03\x03' + SERVICE_UUID[4:6] + b'\x00' +  # Service UUID
-        b'\x0F\x09' + b'My ESP32 BLE'         # Complete Local Name
-    )
-    ble.gap_advertise(100, advertising_data)
+    def send(self, data):
+        self.ble.gatts_notify(0, self.tx, (data + '\n').encode('utf-8'))
 
-advertise()
-print("Advertising started. Waiting for connections...")
+    def advertiser(self):
+        name = bytes(self.name, 'UTF-8')
+        adv_data = bytearray([0x02, 0x01, 0x02]) + bytearray([len(name) + 1, 0x09]) + name
+        self.ble.gap_advertise(100, adv_data)
+        print(f"Advertising: {adv_data.hex()}")
 
-# Main loop
+led = Pin(2, Pin.OUT)
+but = Pin(0, Pin.IN)
+ble = ESP32_BLE("ESP32BLE")
+
+def buttons_irq(pin):
+    led.value(not led.value())
+    ble.send('LED state will be toggled.')
+    print('LED state will be toggled.')
+    
+but.irq(trigger=Pin.IRQ_FALLING, handler=buttons_irq)
+
 while True:
-    time.sleep(1)
+    if ble.ble_msg == 'read_LED':
+        print(ble.ble_msg)
+        led_state = 'ON' if led.value() else 'OFF'
+        ble.send(f'LED is {led_state}.')
+        ble.ble_msg = ""  # Clear the message
+    sleep_ms(100)
+    
