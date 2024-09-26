@@ -18,7 +18,7 @@ class ESP32_BLE:
         self.ble_msg = ""
 
     def connected(self):
-        self.led.value(1)
+        self.led.value(1)  # Turn LED on when connected
         self.timer1.deinit()
 
     def disconnected(self):
@@ -36,6 +36,19 @@ class ESP32_BLE:
             buffer = self.ble.gatts_read(self.rx)
             self.ble_msg = buffer.decode('UTF-8').strip()
             print(f"Received message: {self.ble_msg}")
+
+            # Control LED based on the received message
+            if self.ble_msg == 'turn_on':
+                self.led.value(1)  # Turn LED ON
+                self.send('LED is turned ON.')
+            elif self.ble_msg == 'turn_off':
+                self.led.value(0)  # Turn LED OFF
+                self.send('LED is turned OFF.')
+            elif self.ble_msg == 'read_LED':
+                led_state = 'ON' if self.led.value() else 'OFF'
+                self.send(f'LED is {led_state}.')
+            
+            self.ble_msg = ""  # Clear the message
 
     def register(self):
         NUS_UUID = '6E400001-B5A3-F393-E0A9-E50E24DCCA9E'
@@ -71,10 +84,5 @@ def buttons_irq(pin):
 but.irq(trigger=Pin.IRQ_FALLING, handler=buttons_irq)
 
 while True:
-    if ble.ble_msg == 'read_LED':
-        print(ble.ble_msg)
-        led_state = 'ON' if led.value() else 'OFF'
-        ble.send(f'LED is {led_state}.')
-        ble.ble_msg = ""  # Clear the message
     sleep_ms(100)
-    
+
