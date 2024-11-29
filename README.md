@@ -50,7 +50,7 @@ Não houve aula nesse dia devido ao feriado da Semana da Pátria.
 
 ### **12/set: Ponto de Acesso Wi-Fi no ESP32**
 
-Na aula de 12 de setembro, aprendemos como configurar o ESP32 para funcionar como um ponto de acesso Wi-Fi (AP). Isso nos permitiu configurar o ESP32 como um servidor web que pode ser acessado por outros dispositivos na rede local. Ainda, testamos um sensor touch combinado com um sensor de batimento cardíaco e um buzzer, o que pareceu funcionar, mas com difilculdades na conversão dos dados de frequência para um formato adequado.
+Na aula de 12 de setembro, aprendemos como configurar o ESP32 para funcionar como um ponto de acesso Wi-Fi (AP). Isso nos permitiu configurar o ESP32 como um servidor web que pode ser acessado por outros dispositivos na rede local. Ainda, testamos um sensor touch combinado com um sensor de batimento cardíaco e um buzzer, o que pareceu funcionar, mas com difilculdades na conversão dos dados de frequência para um formato adequado: [Código](https://github.com/ges-cs01/cfa/blob/main/frequencia_cardiaca.py).
 
 **Atividade Prática:**
 - Configuração do ESP32 como Ponto de Acesso Wi-Fi.
@@ -79,7 +79,7 @@ Na última aula de setembro fiz a utilização de Bluetooth no ESP32. Aprendei c
 
 ### **03/out: Formação de Grupo e Teste com Arduino e Sensor DHT**
 
-Formamos os grupos de trabalho para o projeto final da disciplina. Ao invés de utilizar o ESP32 como plataforma principal para o desenvolvimento do projeto, testamos um sensor DHT, que mede umidade e temperatura, com o Arduino. Houve uma dificuldade na conexão do Arduino com o Linux. O problema foi solucionado ao removermos o brltty.
+Formamos os grupos de trabalho para o projeto final da disciplina. Ao invés de utilizar o ESP32 como plataforma principal para o desenvolvimento do projeto, testamos um sensor DHT, que mede umidade e temperatura, com o Arduino, [Código](https://github.com/ges-cs01/cfa/blob/main/dht_arduino.ino). Houve uma dificuldade na conexão do Arduino com o Linux. O problema foi solucionado ao removermos o brltty.
 
 **Atividade Prática:**
 - Formação dos grupos para o projeto final.
