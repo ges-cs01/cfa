@@ -32,7 +32,7 @@ Nesta aula formamos um grupo e foi proposta uma atividade que utilizasse compone
 
 ### **29/ago: Conexão e Uso de Display OLED com o ESP32**
 
-Nessa aula, a tarefa foi conectar um display OLED ao ESP32 e aprender como interagir com ele usando Micropython. O display OLED foi utilizado ferramenta para mostrar dados.
+Nessa aula, a tarefa foi conectar um display OLED ao ESP32 e aprender como interagir com ele usando Micropython. O display OLED foi utilizado como ferramenta para mostrar dados.
 
 Exploramos bibliotecas de Micropython que facilitam a comunicação com o display, como o [`ssd1306`](https://github.com/ges-cs01/cfa/blob/main/ssd1306.py), que permite desenhar textos, formas e até imagens na tela OLED. [Código OLED](https://github.com/ges-cs01/cfa/blob/main/oled.py).
 
