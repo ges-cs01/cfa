@@ -60,7 +60,7 @@ Na aula de 12 de setembro, aprendemos como configurar o ESP32 para funcionar com
 
 ### **19/set: Implementação de um Servidor Web no ESP32**
 
-A aula do dia 19 focou na implementação de um servidor web simples no ESP32. Usamos o ambiente de desenvolvimento Micropython para criar um servidor que poderia receber requisições HTTP e retornar respostas. Isso permitiu que o ESP32 funcionasse como uma plataforma , capaz de interagir com outros dispositivos pela web.
+A aula do dia 19 focou na implementação de um servidor web simples no ESP32. Usamos o ambiente de desenvolvimento Micropython para criar um servidor que poderia receber requisições HTTP e retornar respostas. Isso permitiu que o ESP32 funcionasse como uma plataforma, capaz de interagir com outros dispositivos pela web. [Código Server](https://github.com/ges-cs01/cfa/blob/main/server.py) e [Código Cliente](https://github.com/ges-cs01/cfa/blob/main/cliente.py).
 
 **Atividade Prática:**
 - Desenvolvimento e implementação de um servidor web no ESP32.
