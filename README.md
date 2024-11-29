@@ -34,7 +34,7 @@ Nesta aula formamos um grupo e foi proposta uma atividade que utilizasse compone
 
 Nessa aula, a tarefa foi conectar um display OLED ao ESP32 e aprender como interagir com ele usando Micropython. O display OLED foi utilizado ferramenta para mostrar dados.
 
-Exploramos bibliotecas de Micropython que facilitam a comunicação com o display, como o `ssd1306`, que permite desenhar textos, formas e até imagens na tela OLED.
+Exploramos bibliotecas de Micropython que facilitam a comunicação com o display, como o [`ssd1306`](https://github.com/ges-cs01/cfa/blob/main/ssd1306.py), que permite desenhar textos, formas e até imagens na tela OLED. [Código OLED](https://github.com/ges-cs01/cfa/blob/main/oled.py).
 
 **Atividade Prática:**
 - Conexão do display OLED ao ESP32.
@@ -50,7 +50,7 @@ Não houve aula nesse dia devido ao feriado da Semana da Pátria.
 
 ### **12/set: Ponto de Acesso Wi-Fi no ESP32**
 
-Na aula de 12 de setembro, aprendemos como configurar o ESP32 para funcionar como um ponto de acesso Wi-Fi (AP). Isso nos permitiu configurar o ESP32 como um servidor web que pode ser acessado por outros dispositivos na rede local. Ainda, testamos um sensor touch combinado com um sensor de batimento cardíaco e um buzzer, o que pareceu funcionar, mas com difilculdades na conversão dos dados de frequência para um formato adequado: [Código](https://github.com/ges-cs01/cfa/blob/main/frequencia_cardiaca.py).
+Na aula de 12 de setembro, aprendemos como configurar o ESP32 para funcionar como um ponto de acesso Wi-Fi (AP). Isso nos permitiu configurar o ESP32 como um servidor web que pode ser acessado por outros dispositivos na rede local. Ainda, testamos um sensor touch combinado com um sensor de batimento cardíaco e um buzzer, o que pareceu funcionar, mas com difilculdades na conversão dos dados de frequência para um formato adequado: [Código Freq. Cardíaca](https://github.com/ges-cs01/cfa/blob/main/frequencia_cardiaca.py).
 
 **Atividade Prática:**
 - Configuração do ESP32 como Ponto de Acesso Wi-Fi.
@@ -69,7 +69,7 @@ A aula do dia 19 focou na implementação de um servidor web simples no ESP32. U
 
 ### **26/set: Utilização de Bluetooth no ESP32**
 
-Na última aula de setembro fiz a utilização de Bluetooth no ESP32. Aprendei como configurar o ESP32 para se comunicar via Bluetooth, como sensores e outros módulos. O ESP32 oferece suporte a Bluetooth Low Energy (BLE), o que foi explorado nessa aula. Para controle e conexão utilizei o aplicativo para Android Serial Bluetooth Terminal.
+Na última aula de setembro fiz a utilização de Bluetooth no ESP32. Realizei a configuração no ESP32 para se comunicar via Bluetooth, e controlar sensores e outros módulos. O ESP32 oferece suporte a Bluetooth Low Energy (BLE), o que foi explorado nessa aula. Para controle e conexão utilizei o aplicativo para Android Serial Bluetooth Terminal. [Código Bluetooth](https://github.com/ges-cs01/cfa/blob/main/bluetooth_test.py).
 
 **Atividade Prática:**
 - Configuração do Bluetooth no ESP32.
@@ -79,7 +79,7 @@ Na última aula de setembro fiz a utilização de Bluetooth no ESP32. Aprendei c
 
 ### **03/out: Formação de Grupo e Teste com Arduino e Sensor DHT**
 
-Formamos os grupos de trabalho para o projeto final da disciplina. Ao invés de utilizar o ESP32 como plataforma principal para o desenvolvimento do projeto, testamos um sensor DHT, que mede umidade e temperatura, com o Arduino, [Código](https://github.com/ges-cs01/cfa/blob/main/dht_arduino.ino). Houve uma dificuldade na conexão do Arduino com o Linux. O problema foi solucionado ao removermos o brltty.
+Formamos os grupos de trabalho para o projeto final da disciplina. Ao invés de utilizar o ESP32 como plataforma principal para o desenvolvimento do projeto, testamos um sensor DHT, que mede umidade e temperatura, com o Arduino, [Código DHT](https://github.com/ges-cs01/cfa/blob/main/dht_arduino.ino). Houve uma dificuldade na conexão do Arduino com o Linux. O problema foi solucionado ao removermos o brltty.
 
 **Atividade Prática:**
 - Formação dos grupos para o projeto final.
