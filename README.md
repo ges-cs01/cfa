@@ -50,7 +50,7 @@ Não houve aula nesse dia devido ao feriado da Semana da Pátria.
 
 ### **12/set: Ponto de Acesso Wi-Fi no ESP32**
 
-Na aula de 12 de setembro, aprendemos como configurar o ESP32 para funcionar como um ponto de acesso Wi-Fi (AP). Isso nos permitiu configurar o ESP32 como um servidor web que pode ser acessado por outros dispositivos na rede local. Ainda, testamos um sensor touch combinado com um sensor de batimento cardíaco e um buzzer, o que pareceu funcionar, mas com difilculdades na conversão dos dados de frequência para um formato adequado: [Código Freq. Cardíaca](https://github.com/ges-cs01/cfa/blob/main/frequencia_cardiaca.py).
+Na aula de 12 de setembro, aprendemos como configurar o ESP32 para funcionar como um ponto de acesso Wi-Fi (AP). Isso nos permitiu configurar o ESP32 como um servidor web que pode ser acessado por outros dispositivos na rede local [Código mDNS](https://github.com/ges-cs01/cfa/blob/main/mdns.py). Ainda, testamos um sensor touch combinado com um sensor de batimento cardíaco e um buzzer, o que pareceu funcionar, mas com difilculdades na conversão dos dados de frequência para um formato adequado: [Código Freq. Cardíaca](https://github.com/ges-cs01/cfa/blob/main/frequencia_cardiaca.py).
 
 **Atividade Prática:**
 - Configuração do ESP32 como Ponto de Acesso Wi-Fi.
