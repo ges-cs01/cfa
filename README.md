@@ -26,7 +26,7 @@ Foram testados componentes simples como buzzer e leds.
 
 ### **22/ago: Mini-projeto TM + SI**
 
-Nesta aula formamos um grupo e foi proposta uma atividade que utilizasse componentes eletrônicos simples, como leds e switches, para construir um produto. Nosso grupo projetou uma braçadeira que para proporcionar uma ferramenta discreta e eficiente para pessoas autistas comunicarem que estão em um momento de sobrecarga, ansiedade ou desconforto, através de um LED azul que acende ao pressionar um botão.
+Nesta aula formamos um grupo e foi proposta uma atividade que utilizasse componentes eletrônicos simples, como leds e switches, para construir um produto. Nosso grupo projetou uma braçadeira para proporcionar uma ferramenta discreta e eficiente para pessoas autistas comunicarem que estão em um momento de sobrecarga, ansiedade ou desconforto, através de um LED azul que acende ao pressionar um botão.
 
 ---
 
