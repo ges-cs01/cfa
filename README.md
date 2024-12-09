@@ -82,7 +82,7 @@ Na última aula de setembro fiz a utilização de Bluetooth no ESP32. Realizei a
 Formamos os grupos de trabalho para o projeto final da disciplina. Ao invés de utilizar o ESP32 como plataforma principal para o desenvolvimento do projeto, testamos um sensor DHT, que mede umidade e temperatura, com o Arduino, [Código DHT](https://github.com/ges-cs01/cfa/blob/main/dht_arduino.ino). Houve uma dificuldade na conexão do Arduino com o Linux. O problema foi solucionado ao removermos o brltty.
 
 **Atividade Prática:**
-- Formação dos grupos para o projeto final.
+- Formação dos grupos para o [projeto final](https://github.com/ges-cs01/cfa/blob/main/projeto).
 - Testes práticos com o Arduino e o sensor DHT para medição de temperatura e umidade.
 
 ---
