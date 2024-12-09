@@ -1,5 +1,14 @@
 # Exemplo de Relatório de Projeto: Colete Inteligente para Pet (A editar)
 
+**Aluno:** Ana  
+**Número:** 1
+
+**Aluno:** Davi  
+**Número:** 1
+
+**Aluno**: Guilherme Elui de Souza  
+**Número:** 11796152
+
 ## 1. Introdução
 
 Neste projeto, desenvolvemos um **colete inteligente para pet**, projetado para melhorar a segurança e o conforto dos animais de estimação, com funcionalidades personalizáveis e baseadas em sensores. O colete incorpora sensores para monitorar condições ambientais e físicas, além de oferecer opções temáticas, como vestimentas para datas comemorativas. Este projeto foi realizado com a utilização de tecnologias como o microcontrolador **ESP32**, sensores diversos e sistemas de personalização.
