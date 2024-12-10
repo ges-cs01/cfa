@@ -76,7 +76,7 @@ Durante a execução do projeto, foram obtidos os seguintes resultados:
 
 ### Dificuldades Encontradas
 
-A principal das dificuldades enfrentadas foi a **conexão da fita de LED endereçável com o ESP32**, pois a nossa fita de LED requer **12V**, enquanto o ESP32 opera com **3,3V**. Embora o circuito adicional necessário para ajustar a tensão ainda não tenha sido implementado, realizamos um teste preliminar com um **LED unitário endereçável de 5V**. Em condições de baixa luminosidade, o LED realmente brilhou mais intensamente, como esperado, com o código desenvolvido para essa funcionalidade. Isso demonstrou a viabilidade da ideia de utilizar LEDs endereçáveis para melhorar a visibilidade do pet em ambientes com pouca luz.
+A principal das dificuldades enfrentadas foi a **conexão da fita de LED endereçável com o ESP32**, pois a nossa fita de LED requer **12V**, enquanto o ESP32 opera com **3,3V**. Embora o circuito adicional necessário para ajustar a tensão ainda não tenha sido implementado, realizamos um teste preliminar com um **LED endereçável de 5V**. Em condições de baixa luminosidade, o LED realmente brilhou mais intensamente, como esperado, com o código desenvolvido para essa funcionalidade. Isso demonstrou a viabilidade da ideia de utilizar LEDs endereçáveis para melhorar a visibilidade do pet em ambientes com pouca luz.
 
 
 ## 8. Conclusão
