@@ -81,7 +81,7 @@ A principal das dificuldades enfrentadas foi a **conexão da fita de LED endere�
 
 ## 8. Conclusão
 
-O desenvolvimento do colete inteligente para pets ofereceu uma solução prática para a segurança e maior personalização dos animais de estimação. O sistema de monitoramento, aliado ao controle de visibilidade noturna, demonstrou ser eficiente. O projeto também enfrentou desafios técnicos, como a adaptação da fita de LED de 12V ao ESP32, mas a ideia foi testada com sucesso em um LED unitário de 5V, comprovando sua eficácia em condições de baixa luminosidade. Sendo assim, o projeto abre portas para novas possibilidades, como a integração com sistemas de saúde para pets, uso de mais sensores, criação do circuito adicional para LED 12V e/ouhttps://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/gpio.html um aumento na personalização do design.
+O desenvolvimento do colete inteligente para pets ofereceu uma solução prática para a segurança e maior personalização dos animais de estimação. O sistema de monitoramento, aliado ao controle de visibilidade noturna, demonstrou ser eficiente. O projeto também enfrentou desafios técnicos, como a adaptação da fita de LED de 12V ao ESP32, mas a ideia foi testada com sucesso em um LED unitário de 5V, comprovando sua eficácia em condições de baixa luminosidade. Sendo assim, o projeto abre portas para novas possibilidades, como a integração com sistemas de saúde para pets, uso de mais sensores, criação do circuito adicional para LED 12V e/ou um aumento na personalização do design.
 
 ## 9. Referências
 
